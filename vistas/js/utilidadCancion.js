@@ -423,7 +423,7 @@ function informacionMetadatos()
 {
     cadena="<h4 style=\"font-size:17px;\">Al subir una cancion, se obtiene de esta los metadatos(titulo, artista,album ,etc) por lo tanto es recomendable que las canciones que subas contengan estos datos, de lo contrario se insertara en la base de datos \'undefined\' , ";
     cadena+="recomendamos agregar metadatos a las canciones, pueden usar este  <a style=\"color: #2972d5\" href=\"http://www.xdlab.ru/en/\" TARGET=\"_blank\">programa (windows)</a> ; se debe usar el navegador Mozilla Firefox <img src= \"images/mozilla.png \" width=\"20\" height=\"20 \"> para poder subir canciones y se deben aceptar todos los alert.<br><br>"
-    cadena+="Los formatos que puede reproducir este navegador es <span style=\"color: blue;\">.ogg </span>, entonces se debe realizar la conversion de archivos al formato antes mencionado, puede usar el programa <a style=\"color: #2972d5\" href=\"http://www.miksoft.net/mobileMediaConverterDown.htm\" TARGET=\"_blank\">Mobile Media Converter</a> el cual viene para todas las plataformas(Windows, linux y Mac OS X).<br><br> Disculpen las molestias ocasionadas.</h4>"
+    cadena+="Los formatos que puede reproducir este navegador es <span style=\"color: blue;\">.ogg </span>, entonces se debe realizar la conversion de archivos al formato antes mencionado, puede usar  <a style=\"color: #2972d5\" href=\"http://video.online-convert.com/convert-to-ogg\" TARGET=\"_blank\">siguiente pagina</a>.<br><br> para realizar la conversion. Disculpen las molestias ocasionadas.</h4>"
     
     jAlert(cadena,'Sugerencia Administrador Univalle Music');
 }
