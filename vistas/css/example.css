@@ -1,0 +1,345 @@
+/*****************************************
+SimpleCart(js)
+Written By Brett Wejrowski
+Demo Site by Stephen McKinney
+
+The Style's for the SimpleCart(js) are in
+the Header of index.html. The following
+Just makes the rest of the site look
+pretty
+*****************************************/
+
+
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+body { line-height: 1;}
+ol, ul { list-style: none;}
+blockquote, q { quotes: none;}
+:focus { outline: 0;}
+ins { text-decoration: none;}
+del { text-decoration: line-through;}
+table { border-collapse: collapse; border-spacing: 0;}*/
+
+
+
+/*body{
+    background:url(images/bg.jpg);
+    font:bold 12px Helvetica,Arial,sans-serif;
+}*/
+#content{
+   
+    width:100%;
+    height:90%;
+    margin:0% auto 20px auto;
+    /*background-color: white;*/
+}
+
+/*h1{
+    width:284px;
+    height:0;
+    background:url(images/logo.gif);
+    font-size:25px;
+    padding-top:60px;
+    color: green;
+    margin-left: 20%;
+    overflow:hidden;
+}*/
+h2{
+    font-size:22px;
+    color:#429132;
+}
+#catalog{
+    width:770px;
+    margin:30px 0 0 10px;
+    float:left;
+    height:444px;
+   
+}
+#catalog li{
+    float:left;
+    margin:25px 25px 75px 25px;
+}
+#catalog li img{
+    display:block;
+}
+.price{
+    display:block;
+    float:left;
+    background:url('../images/carrito/span.png');
+    width:33px;
+    height:21px;
+    line-height:20px;
+    margin:6px 4px 0 0;
+    color:#fff;
+    font-size:15px;
+    padding:2px 0 0 5px;
+    font-weight:lighter;
+
+}
+b{
+    float:left;
+    font-size:15px;
+    color:#333;
+}
+b a{
+    font-size:12px;
+    color:#c23f26;
+}
+#sidebar{
+    float:right;
+    
+    width:30%;
+    height: 80%;
+    margin-top:0%;
+   margin-right:  5%;
+    overflow: auto;
+    /*background-color: green;*/
+
+}
+#sidebar a{
+    font-size:11px;
+    color:#000;
+}
+#sidebar a.simpleCart_checkout,
+.checkoutEmptyLinks a.simpleCart_checkout{
+    display:-moz-inline-box;
+    /*display:inline-block;*/
+    width:87px;
+    height:25px;
+    /*background:url('../images/carrito/btnCheckout.gif');*/
+    overflow:hidden;
+    margin-left:100px;
+    margin-top: 10%;
+    vertical-align:middle;
+    text-indent:-9999px;
+    font-size:0;
+}
+a.btnCheckout:hover{
+    background-position:87px 0;
+}
+#downloadContainer{
+    width:230px;
+    font-size:11px;
+    font-weight:normal;
+    margin-top:52px;
+}
+#downloadContainer a{
+    color:#222;
+    text-decoration:none;
+}
+#downloadContainer a:hover{
+    text-decoration:underline;
+}
+/*h3{
+    font-size:22px;
+    color:#c23f26;
+    padding-bottom:4px;
+    margin-bottom:9px;
+    border-bottom:1px dashed #d1d4d5;
+}*/
+
+#smallLogo{
+    margin-top:2px;
+    vertical-align:bottom
+}
+/*************************
+my cart page
+*************************/
+.alsoContainer{
+    float:left;
+    clear:left;
+    width: 55%;
+    height: 35%;
+    padding:3% 18%;
+    margin-left: 1%;
+    -webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+    -moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+    box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #f4e8e8;
+   
+
+}
+.alsoInfo,
+.alsoImage,
+.alsoPrice{
+    float:left;
+}
+.alsoImage{
+    margin-right:8px;
+}
+.alsoInfo{
+    margin-right:9px;
+    width:90px;
+}
+#sidebar .alsoContainer a{
+    color:#c23f26;
+}
+.alsoPrice{
+    color:#418932;
+    font-size:13px;
+    padding-top:5px;
+}
+.checkoutEmptyLinks{
+    float:left;
+    clear:left;
+    width:40%;
+    padding-left:10%;
+    margin-top: 0%;
+    margin-left: 10%;
+}
+.checkoutEmptyLinks a{
+    color:#000;
+    font-size:11px;
+}
+/*************************
+Top Frame
+*************************/
+
+#topFrame{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:32px;
+    background:url('../images/carrito/greenBG.gif') repeat-x;
+    z-index:100;
+    overflow:hidden;
+    text-indent:50px;
+
+}
+#topFrame a{
+    color:#fff;
+    font-weight:bold;
+    line-height:32px;
+}
+.totalRow{
+
+    margin-left: 72%;
+    font-size: 18px;
+}
+#reproductor{
+
+    margin-left: 55%;
+    margin-top: 0%;
+}
+.simpleCart_items{
+    margin-left: 10%;
+    height:  100%;;
+    width: 20%;
+    overflow-x: scroll;
+  
+}
+.itemContainer{
+
+    height: 5%;
+}
+#left{
+
+    height: 90%; 
+    /*background-color: yellow;*/
+    margin-left: 0%;
+    margin-top: 0%;
+    width: 60%;
+   
+
+
+}
+
+.cartHeaders div{
+    color:#333;
+    font-size: 18px;
+}
+.simpleCart_items{
+    float:left;
+    margin-bottom: 40%;
+/*    clear:left;*/
+/*    width:40%;*/
+margin-right: 40%;
+    width:76%;
+    height: 60%;
+    margin:0% 23%;
+    background-color:#f4f0f0;
+}
+.itemContainer{
+    clear:both;
+    width:543px;
+    padding:15px 0;
+    font-size:11px;
+    line-height:25px;
+    height:10px;
+}
+.itemImage{
+    float:left;
+    width:80px;
+}
+.itemImage img{
+    vertical-align:middle;
+}
+.itemName{
+    float:left;
+    width:160px;
+}
+.itemPrice{
+    float:left;
+    width:55px;
+    color:#418932;
+}
+.itemQuantity{
+    float:left;
+    width:105px;
+    vertical-align:middle;
+    text-align:center;
+}
+.itemQuantity input{
+    width:20px;
+    border:1px solid #ccc;
+    padding:3px 2px;
+    margin:0 auto;
+    display:block;
+    font-size:11px;
+}
+.itemTotal{
+    float:left;
+    color:#c23f26;
+    text-align:right;
+    width:45px;
+}
+.totalRow{
+    clear:both;
+    float:left;
+    margin-top:10px;
+}
+.totalItems{
+    float:left;
+    width:105px;
+    margin-left:295px;
+    text-align:center;
+}
+.totalPrice{
+    float:right;
+    text-align:right;
+}
+.simpleCart_empty{
+    
+    color: green;
+    margin-top: 15%;
+}
+
+#audio
+{
+    
+    
+    margin-left: 24%;
+}
+
