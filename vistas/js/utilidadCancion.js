@@ -216,7 +216,7 @@ function validarDescargaCancion(id_cancion,url_cancion,nombre_cancion)
     if($descargarCancion)
     {
         var cadena="";
-        cadena+="<h3 style=\"color:black;\" >¿Deseas descargar la cacnion <span style=\"color:blue;\">"+ nombre_cancion+"</span>?</h3>";
+        cadena+="<h3 style=\"color:black;\" >¿Deseas descargar la cancion <span style=\"color:blue;\">"+ nombre_cancion+"</span>?</h3>";
         cadena+="<form action=\"../Interfaces/cancionInterface.php\" method=\"POST\">";
          
         cadena+="<input id=\"id_cancion\"  value=\""+id_cancion+"\" name=\"id_cancion\" type=\"hidden\" />"
@@ -421,8 +421,8 @@ function eliminarCancionDelista(album_id,identificador)
 
 function informacionMetadatos()
 {
-    cadena="<h4>Al subir una cancion, se obtiene de esta los metadatos(titulo, artista,album ,etc) por lo tanto es recomendable que las canciones que subas contengan estos datos, de lo contrario se insertara en la base de datos \'undefined\' ";
-    cadena+="recomendamos agregar metadatos a las cacniones, pueden usar este  <a style=\"color: #2972d5\" href=\"http://www.xdlab.ru/en/\" TARGET=\"_blank\">programa (windows)</a></h4>"
+    cadena="<h4 style=\"font-size:17px;\">Al subir una cancion, se obtiene de esta los metadatos(titulo, artista,album ,etc) por lo tanto es recomendable que las canciones que subas contengan estos datos, de lo contrario se insertara en la base de datos \'undefined\' , ";
+    cadena+="recomendamos agregar metadatos a las canciones, pueden usar este  <a style=\"color: #2972d5\" href=\"http://www.xdlab.ru/en/\" TARGET=\"_blank\">programa (windows)</a> ; se debe usar el navegador Mozilla Firefox <img src= \"images/mozilla.png \" width=\"20\" height=\"20 \">.<br><br>  Los formatos que puede reproducir este navegador es <span style=\"color: blue;\">.ogg </span>, entonces se recomienda hacer esta conversion de archivos, Disculpen las molestias ocasionadas.</h4>"
     
-    jAlert(cadena,'Sugerencia');
+    jAlert(cadena,'Sugerencia Administrador Univalle Music');
 }
