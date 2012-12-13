@@ -114,11 +114,7 @@ include ('../Interfaces/seguridad.php');
         </header>
 
         <div class="menu">
-            <h3>Enviar alerta</h3>
-
-            <p>
-
-            </p>
+            
 
             <!--                    -->
 
@@ -130,10 +126,7 @@ include ('../Interfaces/seguridad.php');
 
             </p>
 
-            <h3 onclick="mostrarElemento('DatosPersonales')"> Información Personal</h3>
-            <p>
-
-            </p>
+           
 
 
         </div>
