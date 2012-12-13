@@ -64,7 +64,7 @@ class controladorReportes {
         $graph->SetMarginColor('gray');
 //$graph->SetShadow();
 // Setup margin and titles
-        $graph->title->Set("Canciones mas escuchadas");
+        $graph->title->Set("Reporte : Canciones Mas Escuchadas");
 
         $p1 = new PiePlot3D($this->numeroReproducciones);
         $p1->SetSize(0.45);
