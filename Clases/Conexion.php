@@ -7,9 +7,9 @@ class Conexion {
 
     function conectar() {
 
-        $usuario = 'root';
+        $usuario = 'anfepera';
         $password = 'anfepera';
-        $servidor = 'localhost';
+        $servidor = 'mysql';
         $base_datos = 'anfepera';
         $conectarse = mysql_connect($servidor, $usuario, $password) or die("No se puede conectar con servidor");
         if ($conectarse) {
