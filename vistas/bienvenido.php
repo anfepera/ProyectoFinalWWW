@@ -111,11 +111,12 @@ include ('../Interfaces/seguridad.php');
                 </table>
 
                 <a href="../Interfaces/Cerrar.php" style="margin-left: 30%;" id="dr5" class="button blue skew" name="dr5">Salir</a> 
+                
             </div>
         </header>
 
         <div class="menu">
-            <h3>Subir una Cancion</h3>
+            <h3 onclick="informacionMetadatos();">Subir una Cancion</h3>
             <div>
                 <form action="ajaxupload/upload.php" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="startUpload();">
                     <p id="f1_upload_process">Loading...<br/><img src="images/loader.gif" /><br/></p>

@@ -83,7 +83,7 @@
         </header>
 
         <div class="menu">
-            <a id="m2"  class="button orange glossy" name="dr5" onclick="mostrarElemento('listaReproduccion')">Música de Muestra</a>
+           
         </div>
 
         <div id="principal">
