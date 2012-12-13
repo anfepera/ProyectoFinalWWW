@@ -103,8 +103,12 @@ include ('../Interfaces/seguridad.php');
 
 
                 </table>
+                <form action="../Interfaces/Cerrar.php">
+                    
+                    <input style=" margin-left: 35%; width: 30%; background:#e4bf15;" type="submit" value="Salir"/>
+                </form>
 
-                <a href="../Interfaces/Cerrar.php" style="margin-left: 30%; background-color: #bf850d;">Salir</a> 
+<!--                <a href="../Interfaces/Cerrar.php" style="margin-left: 30%; background-color: #bf850d;">Salir</a> -->
 
 
             </div>
