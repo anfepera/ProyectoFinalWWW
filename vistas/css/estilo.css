@@ -589,6 +589,7 @@ div.jp-interface {
     position: relative;
     width:215px;
     height:60px;
+    
 }
 div.jp-single-player div.jp-interface {
     border-bottom:none;
@@ -665,7 +666,7 @@ div.jp-playlist-player div.jp-total-time {
     left:7px;
 }
 div.jp-progress {
-    position: absolute;
+    position: relative;
     overflow:hidden;
     top:25px;
     border:1px solid #000;
@@ -710,6 +711,7 @@ div.jp-volume-bar {
     height:5px;
     cursor: pointer;
     left:123px;
+    background: white;
 }
 div.jp-volume-bar-value {
     background: url("../images/reproductor/jplayer.codrops.png") 0 -30px repeat-x;
@@ -720,7 +722,7 @@ div.jp-playlist {
     /*panel donde se cuadra el scrool para las canciones*/
     /*    width:215px;
         height:435px;*/
-
+/*    background: #ddd9e3;*/
     width:100%;
     height:385px;
 
@@ -743,7 +745,7 @@ div.jp-playlist-player div.jp-playlist li {
     padding:3px;
     margin:3px 6px;
     background:transparent url(../images/reproductor/bg.png) repeat top left;
-    /*background-color: yellow;*/
+    background-color: black;
 }
 div.jp-playlist-player div.jp-playlist li span{
     width:16px;

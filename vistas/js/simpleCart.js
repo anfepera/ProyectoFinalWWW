@@ -355,7 +355,7 @@ function cart(A){
         var F,E=0,G,C;
         var B="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&upload=1&business="+this.userEmail+"&currency_code=USD&lc=US";
         C=0;
-       
+         jAlert('<h4>has comprado las canciones. Puedes descargarlas desde la bibloteca general o desde tus listas de reproduccion. La compra se simula en el momento que das clic en el boton \'pagar via paypal\' .Gracias por tu compra</h4>','Aviso importante');
         for(C=0;C<this.items.length;C++){
             
             tempItem=this.items[C];

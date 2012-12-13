@@ -110,7 +110,10 @@ include ('../Interfaces/seguridad.php');
                     </tr> 
                 </table>
 
-                <a href="../Interfaces/Cerrar.php" style="margin-left: 30%;" id="dr5" class="button blue skew" name="dr5">Salir</a> 
+              <form action="../Interfaces/Cerrar.php">
+                    
+                    <input style=" margin-left: 35%; width: 30%; background:#e4bf15;" type="submit" value="Salir"/>
+                </form>
                 
             </div>
         </header>
@@ -164,11 +167,10 @@ include ('../Interfaces/seguridad.php');
             </p>
             <h3>Organizar por:</h3>
             <p>
-
-                <a type="submit" style="width: 50%;" class="button"  onclick="jAlert('por Genero','Organizar');">Genero</a>
-                <a type="submit" style="width: 50%;" class="button"  onclick="jAlert('por Artista','Organizar');">Artista</a>
-                <a type="submit" style="width: 50%;" class="button"  onclick="jAlert('por Album','Organizar');">Album</a>
-
+                <input style=" margin-left: 5%; width: 40%; background:#e4bf15;" type="button" value="Genero" onclick="jAlert('por Genero','Organizar');"/><br><br>
+                <input style=" margin-left: 5%; width: 40%; background:#e4bf15;" type="button" value="Artista" onclick="jAlert('por Artista','Organizar');"/><br><br>
+                <input style=" margin-left: 5%; width: 40%; background:#e4bf15;" type="button" value="Album" onclick="jAlert('por Album','Organizar');"/><br><br>
+                
             </p>
             <h3 onclick="mostrarElemento('DatosPersonales')"> Información Personal</h3>
             <h3 id="tituloMensaje">Enviar Mensajes</h3>
@@ -314,7 +316,7 @@ include ('../Interfaces/seguridad.php');
                         <!--Here's the Links to Checkout and Empty Cart-->
                         <table>
                             <tr>
-                                <td> <input type="button"  value="Vaciar carrito" class="simpleCart_empty"></td><td> <input type="button"  value="Pagar via paypal" class="simpleCart_checkout"></td><td> <input type="button"  value="Pago UnivalleMusic" onclick="pagarCanciones();"></td>
+                                <td> <input type="button"  value="Vaciar carrito" class="simpleCart_empty"></td><td> <input type="button"  value="Pagar via paypal" class="simpleCart_checkout"></td>
 
                             </tr>
 

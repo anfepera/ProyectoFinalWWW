@@ -56,7 +56,7 @@ function obtenerCanciones()
             cadena+=dataJson[i][1]+"<br>";
             cadena+="<input type=\"button\" value=\"Agregar al carrito\" onclick=\"simpleCart.add('name="+dataJson[i][1]+"','price="+dataJson[i][7]+"','identificador="+dataJson[i][0]+"','Ruta="+dataJson[i][8]+"');return false;\">";
             cadena+=" <input type=\"button\" value=\"Reproducir\" onclick=\"reproducirCancion('"+dataJson[i][8]+"','"+dataJson[i][0]+"','"+dataJson[i][5]+"')\"/>"; 
-            cadena+="<input  type=\"button\" value=\"Agregar a mi Coleccion\" style=\"background-image: url('../images/reproductor/addSong.png')\"/>" 
+//            cadena+="<input  type=\"button\" value=\"Agregar a mi Coleccion\" style=\"background-image: url('../images/reproductor/addSong.png')\"/>" 
 
             cadena+="</div>";
             cadena+=" <div class=\"alsoPrice\">"+dataJson[i][7]+"</div></div>";
@@ -202,7 +202,7 @@ function registrarCancionesCompradas(id_cancion)
     }
     function llegada(datos)
     {
-        jAlert('Llegaron los datos'+datos);	
+//        jAlert('Llegaron los datos'+datos);	
     }
 					
 					
