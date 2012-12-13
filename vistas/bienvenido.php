@@ -14,7 +14,7 @@ include ('../Interfaces/seguridad.php');
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Sitio Web Univalle Music</title>
-        <link rel="stylesheet" type="text/css" href="http://blogdisemucho.blogcindario.com/ficheros/buttons.css" />
+<!--        <link rel="stylesheet" type="text/css" href="http://blogdisemucho.blogcindario.com/ficheros/buttons.css" />-->
 
         <script type="text/javascript" src="js/utilidadCancion.js"></script>
         <script type="text/javascript" src="js/utilidadAlerta.js"></script>
