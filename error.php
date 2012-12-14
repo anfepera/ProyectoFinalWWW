@@ -201,14 +201,7 @@
 
 
         <div id="principal">
-            <div id="busquedaCanciones">
-
-                <h2>Busqueda de Canciones</h2>
-                <input type=search autofocus placeholder="busqueda de canciones" class="input" name=“busqueda”>
-                <button type="button" class="button" draggable="true">Buscar</button>
-
-
-            </div>
+           
 
             <div id="resultados">
 
@@ -285,7 +278,7 @@
                 </div>
              <div id="error">
                     
-                    <h3 style="color: #f41412; font-size: 30px; margin-left: 30%; margin-top:10%;  width: 37%"> Error al autenticar, por favor digite de nuevo el nombre de usuario y la contraseña </h3>
+                 <h3 style="color: #fbf6f6; font-size: 30px; margin-left: 30%; margin-top:10%;  width: 37%"> Error al autenticar, por favor digite de nuevo el nombre de usuario y la contraseña </h3>
                     
                 </div>
 
