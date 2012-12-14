@@ -54,9 +54,13 @@ class controladorUsuario {
             echo $respuesta;
 
             $_SESSION['autentificado'] = "1";
-
-
             header("Location: ../vistas/bienvenido.php");
+//          
+//          //Borrar el contenido del archivo de alertas
+            $filename = dirname(__FILE__) . '/alertas.txt';
+            file_put_contents($filename, $mensaje);
+            die();
+
         } else {
 
 
@@ -88,8 +92,11 @@ class controladorUsuario {
             }
              else
                  {
-                
+                //Borrar el contenido del archivo de alertas
                 header("Location: ../vistas/bienvenido.php");
+                $filename = dirname(__FILE__) . '/alertas.txt';
+                file_put_contents($filename, '');
+                die();
             }
            
         } else {

@@ -18,7 +18,8 @@
         <script src="vistas/js/utilidades.js" type="text/javascript"></script>
         <script src="vistas/js/ajax.js" type="text/javascript"></script>
         <script type="text/javascript" src="vistas/js/sessvars.js"></script>
-
+        
+        
         <link href="vistas/css/estilo.css" rel="stylesheet" type="text/css"> 
         <style>
             .reference{
@@ -70,7 +71,7 @@
                 <div id="logueo">
                     <table>
                         <tr>
-                            <th><span style="color: white;">Usuario:</span></th><th> <input name="id"  id="idUsuario" placeholder="nombre usuario"  required="true" onChange="recuperarLogin();" /> </th>
+                            <th><span style="color: white;">Usuario:</span></th><th> <input name="id"  id="idUsuario" placeholder="nombre usuario"  required="true" onChange="recuperarLogin('idUsuario');" /> </th>
                         </tr> 
                         <tr>
                             <th><span style="color: white;">Password:</span></th><th><input type="password" name="pass"  placeholder="digite su password" required="true"/></th>
@@ -92,8 +93,7 @@
                     <form id="formulario2" action="Interfaces/usuarioInterface.php" method="POST" onsubmit="obtenerBiblioteca();">
                         <table>
                             <tr>
-
-                                <th><span style="color: white;">login</span></th><th> <input name="login" id="login" placeholder="nombre usuario" required="true" /> </th><th><span id="mensaje" style="color: white;"></span></th>
+                                <th><span style="color: white;">login</span></th><th> <input name="login" id="login" placeholder="nombre usuario" required="true" onChange="recuperarLogin('login');" /> </th><th><span id="mensaje" style="color: white;"></span></th>
                             </tr>
                             <tr>
                                 <th><span style="color: white;">Password</span></th><th><input type="password"  name="password" id="password" required="true" placeholder="digite su password"/></th><th></th>

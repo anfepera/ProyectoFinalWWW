@@ -1,7 +1,5 @@
 <?php
 
-//session_start();
-//        echo 'cancionInterface';
 include('../Controladores/controladorCancion.php');
 $cancionInerface = new cancionInerface();
 $cancionInerface->realizarOperacion($_POST['opcion']);

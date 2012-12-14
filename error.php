@@ -17,6 +17,8 @@
 
         <link rel="stylesheet" type="text/css" href="vistas/css/uploadify.css">
         <link href="vistas/css/estilo.css" rel="stylesheet" type="text/css">
+        
+        <script type="text/javascript" src="vistas/js/sessvars.js"></script>
 
  <script type="text/javascript">
  ejecutarLista();
@@ -163,7 +165,7 @@
                     <table>
                         <tr>
 
-                            <th><span style="color: white;">Usuario:</span></th><th> <input name="id"  placeholder="nombre usuario"  required="true"/> </th>
+                            <th><span style="color: white;">Usuario:</span></th><th> <input name="id" id="idUsuario" placeholder="nombre usuario"  required="true" onChange="recuperarLogin('idUsuario');"/> </th>
                         </tr> 
                         <tr>
                             <th><span style="color: white;">Password:</span></th><th><input type="password" name="pass"  placeholder="digite su password" required="true"/></th>
@@ -252,7 +254,7 @@
                     <table>
                         <tr>
 
-                            <th><span style="color: white;">login</span></th><th> <input name="login" id="login" placeholder="nombre usuario" required="true" /> </th><th><span id="mensaje" style="color: white;"></span></th>
+                            <th><span style="color: white;">login</span></th><th> <input name="login" id="login" placeholder="nombre usuario" required="true" onChange="recuperarLogin('login');"/> </th><th><span id="mensaje" style="color: white;"></span></th>
                         </tr>
                         <tr>
                             <th><span style="color: white;">Password</span></th><th><input type="password"  name="password" id="password" required="true" placeholder="digite su password"/></th><th></th>

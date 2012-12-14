@@ -15,9 +15,9 @@ var $listaParaInsertarCancion="";
 var $identificador=0;
 var $usuario="";
 
-function recuperarLogin()
+function recuperarLogin(id)
 {
-    sessvars.usuario = $("#idUsuario").attr("value");
+    sessvars.usuario = $("#"+id).attr("value");
 }
 
 
