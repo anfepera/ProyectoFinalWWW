@@ -179,13 +179,13 @@ include ('../Interfaces/seguridad.php');
             <p>
                 <input type="button" id="reportes" style="width: 80%; background:#e4bf15; height: 10%;"   onclick="mostrarElemento('reporteEscuchadas');" value="Canciones mas escuchadas"><br> <br>
             </p>
-            <h3 id="tituloMensaje">Enviar Mensajes</h3>
-            <p id="mesajes">
+            <h3 id="tituloMensaje" style="display:none">Enviar Mensajes</h3>
+            <p id="mesajes" style="display:none">
                 <textarea id="descripcion" style="width:200px;height:100px;resize:none;" rows="10" ></textarea>
                 <input type="button" id="guardar" value="Enviar" onclick="insertarAlerta('');"/>
             </p>
-            <h3 id="prueba">Prueba</h3>
-            <div id="recMensajes"">
+            <h3 id="prueba" style="display:none" >Alertas</h3>
+            <div id="recMensajes" style="display:none">
                  <iframe width="240" height="150" src="comet.html" scrolling="auto" frameborder="no" ></iframe>
             </div>
         </div>
