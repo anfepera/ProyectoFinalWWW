@@ -3,10 +3,13 @@ var $descargarCancion=false;
 function leerMetadatos(file) {
     var datosCancion = [];
     function callback() {
+        alert(file);
         var tags = ID3.getAllTags(file);
         if(ID3.getTag(file, "title")=='undefine' || ID3.getTag(file, "title")==null)
         {
-            datosCancion[0] = file;
+            var fragmentos = file.split(".")
+            datosCancion[0] = fragmentos[0];
+            alert(file);
         }else
         {
             datosCancion[0] = ID3.getTag(file, "title");
@@ -19,7 +22,7 @@ function leerMetadatos(file) {
 //    alert(datosCancion[0]+' '+ datosCancion[1]+' '+ datosCancion[2]+' '+ datosCancion[3]);	
 //    
 //    alert('Datos de la Canción: \n\n    Título: '+ datosCancion[1]+ '\n    Interprete: '+ datosCancion[1]+ '\n    Genero: '+ datosCancion[2]+ '\n    Album: '+ datosCancion[3]);
-jAlert("Cancion subida correcrtamente","EXito");
+alert("Cancion subida correcrtamente","EXito");
     return datosCancion;
 }
 

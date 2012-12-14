@@ -47,7 +47,6 @@ function insertarAlerta(descripcion)
     var x;
     x=$(document);
     x.ready(enviarA(url, datos_a_enviar));
-    return datos_recibidos;
     
 }
 

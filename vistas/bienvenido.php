@@ -82,8 +82,7 @@ include ('../Interfaces/seguridad.php');
         <script type="text/javascript">
             simpleCart = new cart("<? echo $_SESSION['correo'] ?>");
         </script>
-
-        <!--Comet-->
+         <!--Comet-->
 
         <!--    Fin comet-->
     </head>
@@ -160,7 +159,7 @@ include ('../Interfaces/seguridad.php');
             </p>
             <h3 id="prueba" style="display:none" >Alertas</h3>
             <div id="recMensajes" style="display:none">
-                 <iframe width="240" height="150" src="comet.html" scrolling="auto" frameborder="no" ></iframe>
+                 <iframe id="menFrame" width="240" height="150" src="comet.html" scrolling="auto" frameborder="no" ></iframe>
             </div>
         </div>
 
