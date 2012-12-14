@@ -458,7 +458,7 @@ function reproductor()
             var price       =$paths.find('.mp_price').html();
             var identificador  =$paths.find('.mp_id').html();
         
-            agregarCancionAListaRep('', 'Mis Favoritas', identificador);
+            agregarCancionAListaRep('', 'Mis Favoritas', identificador, title);
             jAlert("la canción " +title + ", se ha agregado a tu lista de favoritas!");  
     
         });
@@ -894,7 +894,7 @@ function listarCancionesCompartidas()
                 $cadena +="<span class=\"mp_play\">Play</span>";
                 $cadena +="<span class=\"mp_addpl\">Add to playlist</span></div>";
                 $cadena +="<div class=\"mp_song_info\" style=\"display:none;\">";
-                $cadena +="<span class=\"mp_song_title\">"+canciones[j][8]+"</span><span class=\"mp_mp3\">"+canciones[j][8]+"</span>";
+                $cadena +="<span class=\"mp_song_title\">"+canciones[j][1]+"</span><span class=\"mp_mp3\">"+canciones[j][8]+"</span>";
                 $cadena +="<span class=\"mp_ogg\">"+canciones[j][8]+"</span>";
                 $cadena +="<span class=\"mp_id\">"+canciones[j][0]+"</span>";
                 $cadena +="<span class=\"mp_price\">"+canciones[j][2]+"</span></div></div>";
@@ -944,7 +944,7 @@ function obtenerBiblioteca()
         $cadena +="<span class=\"mp_play\">Play</span>";
         $cadena +="<span class=\"mp_addpl\">Add to playlist</span></div>";
         $cadena +="<div class=\"mp_song_info\" style=\"display:none;\">";
-        $cadena +="<span class=\"mp_song_title\">"+canciones[j][8]+"</span><span class=\"mp_mp3\">"+canciones[j][8]+"</span>";
+        $cadena +="<span class=\"mp_song_title\">"+canciones[j][1]+"</span><span class=\"mp_mp3\">"+canciones[j][8]+"</span>";
         $cadena +="<span class=\"mp_ogg\">"+canciones[j][8]+"</span>";
         $cadena +="<span class=\"mp_id\">"+canciones[j][0]+"</span>";
         $cadena +="<span class=\"mp_price\">"+canciones[j][2]+"</span></div></div>";

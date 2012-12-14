@@ -69,15 +69,19 @@ class ControladorListaReproduccion {
         }
         echo json_encode($datosLista);
     }
-    function agregarCancion($id_coleccion, $nombre_lista, $id_cancion)
+    function agregarCancion($id_coleccion, $nombre_lista, $id_cancion, $titulo)
     {
       
-         $sentencia = "INSERT INTO Canciones_por_Lista_Reprod (id_coleccion, nombre_lista, id_cancion) VALUES('$id_coleccion', '$nombre_lista', '$id_cancion')";
+        $sentencia = "INSERT INTO Canciones_por_Lista_Reprod (id_coleccion, nombre_lista, id_cancion) VALUES('$id_coleccion', '$nombre_lista', '$id_cancion')";
         echo $sentencia;
         $execute = mysql_query($sentencia) or die('Error al agregar la canción');
 
         if ($execute) {
             echo "La cancion se agregó correctamente";
+            $mensaje = 'A '.$id_coleccion.' le gusta la cancion '.$titulo; 
+            $filename = dirname(__FILE__) . '/alertas.txt';
+            file_put_contents($filename, $mensaje);
+            die();
         }        
     }
     

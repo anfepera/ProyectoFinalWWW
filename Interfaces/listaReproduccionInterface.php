@@ -43,7 +43,7 @@
                     break;
                     
                     case 5:
-                        $contListReprod->agregarCancion($_SESSION['login'], $_POST['nombre_lista'], $_POST['id_cancion']);
+                        $contListReprod->agregarCancion($_SESSION['login'], $_POST['nombre_lista'], $_POST['id_cancion'], $_POST['titulo']);
                     break;
                     
                     case 6:

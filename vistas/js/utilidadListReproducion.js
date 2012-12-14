@@ -100,12 +100,12 @@ function cargarListas()
     return datos_para_cargar_listas;
 }
 
-function agregarCancionAListaRep(id_coleccion, nombre_lista, id_cancion)
+function agregarCancionAListaRep(id_coleccion, nombre_lista, id_cancion, titulo)
 {
     opcion=5;
 //    alert('entro a la funcion');
     var url = "../Interfaces/listaReproduccionInterface.php";
-    var datos_a_enviar = "opcion=5&id_coleccion="+id_coleccion+"&nombre_lista="+nombre_lista+"&id_cancion="+id_cancion;
+    var datos_a_enviar = "opcion=5&id_coleccion="+id_coleccion+"&nombre_lista="+nombre_lista+"&id_cancion="+id_cancion+"&titulo="+titulo;
     var x;
     x=$(document);
     x.ready(enviar(url, datos_a_enviar));
