@@ -60,7 +60,9 @@ function mostrarElemento(elemento)
         }else
         {
             $("#recMensajes").css("display", "block");
-            $("#prueba").css("display", "block");                
+            $("#prueba").css("display", "block");
+            $("#reportes").css("display", "none");
+            $("#tituloReporte").css("display", "none");
         }
     }
         
