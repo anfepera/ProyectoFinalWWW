@@ -317,7 +317,7 @@ function descargarCancion(id_cancion)
 
 function listarCompartidas()
 {   
-//    alert('entra a listarCanciones');
+//    alert('entra a listarCompartidas');
     var datos_recib = [];
     var x;
     x=$(document);
@@ -348,15 +348,13 @@ function listarCompartidas()
     function llegada(datos)
     {
         datos_recib = eval(datos);
-        alert(datos_recib);
+//        alert(datos_recib);
     }
     function problemas()
     {
         alert('Problema al listar las canciones');
     }
-    alert('Se ha cargado toda su colección');
-//    alert(datos_recib);
-//    alert(datos_recib);
+    alert('Se han cargado sus canciones compartidas');
     return datos_recib;
 }
 

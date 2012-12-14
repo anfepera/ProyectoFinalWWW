@@ -7,10 +7,10 @@ class Conexion {
 
     function conectar() {
 
-        $usuario = 'anfepera';
-        $password = 'anfepera';
-        $servidor = 'mysql';
-        $base_datos = 'anfepera';
+        $usuario = 'root';
+        $password = 'wilmarrm';
+        $servidor = 'localhost';
+        $base_datos = 'uvmusic';
         $conectarse = mysql_connect($servidor, $usuario, $password) or die("No se puede conectar con servidor");
         if ($conectarse) {
 //          echo 'Servidor encontardo<br>';

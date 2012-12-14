@@ -6,13 +6,16 @@ $conexionBD = new Conexion();
 $conexionBD->conectar();
 
 //        $contCan = new controladorCancion(123, '', '$genero', '$album', '$precio', '$url', '$usuario');
-//        $contCan->contar();
+//        $contCan->listarCompartidas();
 class controladorCancion {
 
     var $cancion;
+    var $usuario;
 
     function __construct($titulo, $interprete, $genero, $album, $precio, $url, $usuario) {
         $this->cancion = new Cancion($titulo, $interprete, $genero, $album, $precio, $url, $usuario);
+        session_start();
+        $this->usuario = $_SESSION['login'];
     }
 
     function insertar() {
@@ -77,17 +80,6 @@ class controladorCancion {
         $consulta = mysql_query("SELECT * FROM Cancion") or die('Error de la aplicacion');
         $cont = 0;
         while ($fila = mysql_fetch_array($consulta)) {
-//                       $datosCancion[] =$fila['id'];
-//                        $datosCancion[] = $fila['titulo'];
-//			$datosCancion[] = $fila['interprete'];
-//                        $datosCancion[$cont][3] = $fila['genero'];
-//			$datosCancion[] = $fila['album'];
-//			$datosCancion[] = $fila['no_reproducciones'];
-//			$datosCancion[] = $fila['no_compras'];
-//			$datosCancion[] = $fila['precio'];
-//                        $datosCancion[] = $fila['url'];
-//                        $datosCancion[] = $fila['login_usuario'];
-
             $datosCancion[$cont][0] = $fila['id'];
             $datosCancion[$cont][1] = $fila['titulo'];
             $datosCancion[$cont][2] = $fila['interprete'];
@@ -232,13 +224,18 @@ class controladorCancion {
     
     function listarCompartidas()
     {
+        $id_usuario = $this->usuario;
+        $sentencia = "SELECT * FROM Canciones_compartidas WHERE login_usuario_envia='$id_usuario' OR login_usuario_recibe='$id_usuario'"; 
+//        echo $sentencia;
+        $consulta = mysql_query($sentencia) or die('Error al cargar la lista');
+        $cont=0;
         $canciones_comp = array();
-        $consulta = mysql_query('SELECT * FROM Canciones_compartidas');
         while($fila = mysql_fetch_array($consulta))
         {
-            $canciones_comp[] =$fila['login_usuario_envia'];
-            $canciones_comp[] =$fila['id_cancion'];
-            $canciones_comp[] =$fila['login_usuario_recibe'];
+            $canciones_comp[$cont][0] =$fila['login_usuario_envia'];
+            $canciones_comp[$cont][1] =$fila['id_cancion'];
+            $canciones_comp[$cont][2] =$fila['login_usuario_recibe'];
+            $cont++;
         }
         echo json_encode($canciones_comp);
     }

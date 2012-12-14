@@ -31,8 +31,8 @@ function mostrarElemento(elemento)
         $("#reproductor").css("display", "none");
         $("#subirCancion").css("display", "none");
         $("#crearLista").css("display", "none");
-         $("#content").css("display", "none");
-         $("#reporteCompradas").css("display", "none");
+        $("#content").css("display", "none");
+        $("#reporteCompradas").css("display", "none");
         $("#reporteEscuchadas").css("display", "none");
         
         //        $("#principal").css("display", "none");
@@ -125,7 +125,7 @@ function verificarPassword()
         $passwordOK=false;
         //alert('Los password no coinciden...');
         document.getElementById('mensajePassword2').textContent = 'Password incorrecto';
-//        document.getElementById("btnRegistrar").disabled=true;
+        //        document.getElementById("btnRegistrar").disabled=true;
         $("#mensajePassword2").css("color", "red");
     }
     else{
@@ -215,11 +215,11 @@ function reproductor()
     /**
      * plays song in position i of the list of songs (playlist)
      */
-//    $("#jplayer_add").bind('click',function()
-//    {
-//        jAlert("VAs a crear una nueva lista de reproduccion","Nueva lista");
-//
-//    });
+    //    $("#jplayer_add").bind('click',function()
+    //    {
+    //        jAlert("VAs a crear una nueva lista de reproduccion","Nueva lista");
+    //
+    //    });
     
     
    
@@ -429,7 +429,7 @@ function reproductor()
     /**
      * The next are the events for clicking on both "play" and "add to playlist" icons
      */
-        $('#mp_content_wrapper').find('.mp_comp').bind('click',function(){
+    $('#mp_content_wrapper').find('.mp_comp').bind('click',function(){
         var $this = $(this);
         var $paths = $this.parent().siblings('.mp_song_info');
         var title  = $paths.find('.mp_song_title').html();
@@ -442,7 +442,7 @@ function reproductor()
         
         var id_amigo=prompt("Por favor ingresa el ID de tu amigo"," ");
         compartirCancion(id_amigo, $identificador, title);
-        });
+    });
        
     $('#mp_content_wrapper').find('.mp_like').bind('click',function()
                  
@@ -479,11 +479,6 @@ function reproductor()
         var price       =$paths.find('.mp_price').html();
         var identificador  =$paths.find('.mp_id').html();
         validarDescargaCancion(identificador, mp3, title)
-        
-        
-        
-        
-       
     });
     
     $('#mp_content_wrapper').find('.mp_delete').bind('click',function()
@@ -520,9 +515,9 @@ function reproductor()
         var song_idx	= album_id + '_' + song_index;
         var price       =$paths.find('.mp_price').html();
         var identificador  =$paths.find('.mp_id').html();
-         aumentarNumeroReproducciones(identificador);
- //www                   
-//        jAlert("linea 361  titulo= "+title +" rutaMp3 = "+mp3 +" Precio= "+price +" id= "+identificador);
+        aumentarNumeroReproducciones(identificador);
+        //www                   
+        //        jAlert("linea 361  titulo= "+title +" rutaMp3 = "+mp3 +" Precio= "+price +" id= "+identificador);
         //add to playlist and play the song
         addFirst(song_idx,title,mp3,ogg);
     });
@@ -600,7 +595,7 @@ function reproductor()
      */
     $('#mp_content_wrapper').find('.mp_playall').bind('click',function()
     {
-//        jAlert("Se va a reproducir toda la lista de reproduccion", "Lista de Reproduccion");  
+        //        jAlert("Se va a reproducir toda la lista de reproduccion", "Lista de Reproduccion");  
 
         $esLista=true;
         var $this 		= $(this);
@@ -646,7 +641,7 @@ function cargar(nombreLista)
         var canciones_por_lista = cancionesPorLista(123);
         if(i==1)alert('Se ha cargado toda su colección');
         var canciones = listarCanciones();  
-//            if(i=1)alert('Se ha cargado toda su colección');
+    //            if(i=1)alert('Se ha cargado toda su colección');
     }
 
     for(var j in listasReproduccion)
@@ -666,7 +661,7 @@ function cargar(nombreLista)
         $carrusel +="<li><img src=\""+listasReproduccion[j][2]+"\" id=\"image"+listasReproduccion[j][1]+"\" alt='"+listasReproduccion[j][1]+"' title='"+listasReproduccion[j][1]+', contiene '+(listasReproduccion[j].length)+" Canciones'  width='110' height='88'/></li>";
         
     }
-//    alert('Valor de cadena: '+ $cadena2);
+    //    alert('Valor de cadena: '+ $cadena2);
     document.getElementById('mp_content_wrapper').innerHTML= $cadena2;
     for(var i in listasReproduccion)
     {
@@ -679,7 +674,7 @@ function cargar(nombreLista)
                     if(canciones_por_lista[k][2]===canciones[j][0])
                     {
                         $cadena += " <div> <h3>"+canciones[j][1]+"</h3>"; 
-                        $cadena += " <div class=\"mp_options\"><span class=\"mp_comp\">Compartir</span><span class=\"mp_delete\">delete</span><span class=\"mp_like\">like</span><span class=\"mp_download\" title='Si deseas descargar esta cancion haz clic aqui'>download</span>";
+                        $cadena += "<div class=\"mp_options\"><span class=\"mp_comp\">Compartir</span><span class=\"mp_delete\">delete</span><span class=\"mp_like\">like</span><span class=\"mp_download\" title='Si deseas descargar esta cancion haz clic aqui'>download</span>";
                         $cadena += "<span class=\"mp_play\">Play</span>";
                         $cadena += "<span class=\"mp_addpl\">Add to playlist</span></div>";
                         $cadena += "<div class=\"mp_song_info\" style=\"display:none;\">";
@@ -692,7 +687,7 @@ function cargar(nombreLista)
             }
         }
         //alert('se actualiza: '+listasReproduccion[i][0]+listasReproduccion[i][1]);
-//        alert($cadena);
+        //        alert($cadena);
         document.getElementById(listasReproduccion[i][0]+listasReproduccion[i][1]).innerHTML= $cadena; 
         document.getElementById('mp_albums').innerHTML= $carrusel;
         $cadena='';
@@ -766,7 +761,7 @@ function agregarCancionALista()
     else
     {
     
-//                jAlert("insertando cancion "+$identificador+' - '+$cancionAgregar+" en lista de reproduccion "+$listaParaInsertarCancion,"metodo agregar cancion");
+        //                jAlert("insertando cancion "+$identificador+' - '+$cancionAgregar+" en lista de reproduccion "+$listaParaInsertarCancion,"metodo agregar cancion");
 
         //        Metodo editar lista de coleecion aqui
         //        jAlert($identificador);
@@ -793,14 +788,10 @@ function combo(lista)
     else
     {
         $listaParaInsertarCancion=content;
-//        jAlert("Se eligio la opcion "+ content ,"Alerta linea 835");
+    //        jAlert("Se eligio la opcion "+ content ,"Alerta linea 835");
               
     }
   
-}
-function listarUsuarios()
-{
-    metodoAjax('listar');
 }
 
 function metodoAjax()
@@ -814,7 +805,7 @@ function metodoAjax()
     {
         var login=$("#login").attr("value");
         var datos_a_enviar = "accion="+accion+"&login="+login;
-//        alert(datos_a_enviar);
+        //        alert(datos_a_enviar);
         $.ajax({
             async:true,
             type: "POST",
@@ -831,7 +822,7 @@ function metodoAjax()
     }
     function inicioEnvio()
     {
-     }
+    }
     function llegada(datos)
     {
         alert(datos);
@@ -856,7 +847,7 @@ function metodoAjax()
         else 
         {
             $loginOK=true;
-             document.getElementById('mensaje').textContent = 'Login disponible'
+            document.getElementById('mensaje').textContent = 'Login disponible'
             $("#mensaje").css("color", "green");
             //                $("#btnRegistrar").css('disable', false);
             if($loginOK && $passwordOK)
@@ -879,40 +870,40 @@ function metodoAjax()
 function listarCancionesCompartidas()
 {
     var canComp = listarCompartidas();
-    alert(canComp[0][1]);
     var canciones = listarCanciones();
-    alert(canComp[0][0]);
     var $cadena2="";
+    var $cadena="";
         
-        $cadena2+= " <div class=\"mp_content\" id=\"compartidas\" >";
-        $cadena2 +="<img src=\"images/reproductor/compartidas.png\" alt=\"Compartidas\"/>" ;
-        $cadena2 += " <a href=\"#\" class=\"mp_playall\">Play all</a>";
-        $cadena2 +=" <div class=\"mp_description\">";
-        $cadena2 +=" <h2 >Mis Compartidas</h2></div>";
-        $cadena2 +=" <div id=\"canCompartidas\" class=\"mp_songs\"></div></div>";  
-        document.getElementById('mp_content_wrapper').innerHTML= $cadena2;
+    $cadena2+= " <div class=\"mp_content\" id=\"compartidas\" >";
+    $cadena2 +="<img src=\"images/reproductor/compartidas.png\" alt=\"Compartidas\"/>" ;
+    $cadena2 += " <a href=\"#\" class=\"mp_playall\">Play all</a>";
+    $cadena2 +=" <div class=\"mp_description\">";
+    $cadena2 +=" <h2 >Mis Compartidas</h2></div>";
+    $cadena2 +=" <div id=\"canCompartidas\" class=\"mp_songs\"></div></div>";  
+   
+     document.getElementById('mp_content_wrapper').innerHTML= $cadena2;
+    
     for(var k in canComp)
-        {
+    {
         for(var j in canciones){
             //                 var numero_de_canciones=0;
             if(canComp[k][1]===canciones[j][0])
             {
-                alert(canComp[k][1]+' '+canciones[j][0]);
-                $cadena += " <div> <h3>"+canciones[j][1]+"</h3>"; 
-                $cadena += " <div class=\"mp_options\"><span class=\"mp_delete\">delete</span><span class=\"mp_like\">like</span><span class=\"mp_download\" title='Si deseas descargar esta cancion haz clic aqui'>download</span>";
-                $cadena += "<span class=\"mp_play\">Play</span>";
-                $cadena += "<span class=\"mp_addpl\">Add to playlist</span></div>";
-                $cadena += "<div class=\"mp_song_info\" style=\"display:none;\">";
-                $cadena += "<span class=\"mp_song_title\">"+canciones[j][1]+"</span><span class=\"mp_mp3\">"+canciones[j][8]+"</span>";
-                $cadena += "<span class=\"mp_ogg\">"+canciones[j][8]+"</span>";
-                $cadena += "<span class=\"mp_id\">"+canciones[j][0]+"</span>";
-                $cadena += "<span class=\"mp_price\">"+canciones[j][0]+"</span></div></div>";
+                $cadena +=" <div> <h3>"+canciones[j][1]+"</h3>"; 
+                $cadena +=" <div class=\"mp_options\"><span class=\"mp_comp\">Compartir</span><span class=\"mp_delete\">delete</span><span class=\"mp_like\">like</span><span class=\"mp_download\" title='Si deseas descargar esta cancion haz clic aqui'>download</span>";
+                $cadena +="<span class=\"mp_play\">Play</span>";
+                $cadena +="<span class=\"mp_addpl\">Add to playlist</span></div>";
+                $cadena +="<div class=\"mp_song_info\" style=\"display:none;\">";
+                $cadena +="<span class=\"mp_song_title\">"+canciones[j][8]+"</span><span class=\"mp_mp3\">"+canciones[j][8]+"</span>";
+                $cadena +="<span class=\"mp_ogg\">"+canciones[j][8]+"</span>";
+                $cadena +="<span class=\"mp_id\">"+canciones[j][0]+"</span>";
+                $cadena +="<span class=\"mp_price\">"+canciones[j][2]+"</span></div></div>";
             }
-        }
-        }
-        document.getElementById("canCompartidas").innerHTML= $cadena; 
-        $cadena='';
-        reproductor();
+          }
+    }
+    document.getElementById("canCompartidas").innerHTML= $cadena; 
+    $cadena='';
+    reproductor();
 }
 
 function obtenerBiblioteca()
@@ -935,11 +926,7 @@ function obtenerBiblioteca()
   
     var canciones = listarCanciones();
    
-  
-    
-   
     $cadena2+= " <div class=\"mp_content\" id=\"todo\" >";
-        
     $cadena2 +="<img src=\"images/listasReproduccion/biblioteca.jpg\" alt=\"Biblioteca\"/>" ;
     $cadena2 += " <a href=\"#\" class=\"mp_playall\">Play all</a>";
     $cadena2 +=" <div class=\"mp_description\">";
@@ -950,20 +937,20 @@ function obtenerBiblioteca()
    
     document.getElementById('mp_content_wrapper').innerHTML= $cadena2;
    
-   for(var j in canciones)
-        {
-            $cadena +=" <div> <h3>"+canciones[j][1]+"</h3>"; 
-            $cadena +=" <div class=\"mp_options\"><span class=\"mp_comp\">Compartir</span><span class=\"mp_delete\">delete</span><span class=\"mp_like\">like</span><span class=\"mp_download\" title='Si deseas descargar esta cancion haz clic aqui'>download</span>";
-            $cadena +="<span class=\"mp_play\">Play</span>";
-            $cadena +="<span class=\"mp_addpl\">Add to playlist</span></div>";
-            $cadena +="<div class=\"mp_song_info\" style=\"display:none;\">";
-            $cadena +="<span class=\"mp_song_title\">"+canciones[j][8]+"</span><span class=\"mp_mp3\">"+canciones[j][8]+"</span>";
-            $cadena +="<span class=\"mp_ogg\">"+canciones[j][8]+"</span>";
-            $cadena +="<span class=\"mp_id\">"+canciones[j][0]+"</span>";
-            $cadena +="<span class=\"mp_price\">"+canciones[j][2]+"</span></div></div>";
-        }
-        document.getElementById('Biblioteca').innerHTML= $cadena; 
-        $cadena='';
+    for(var j in canciones)
+    {
+        $cadena +=" <div> <h3>"+canciones[j][1]+"</h3>"; 
+        $cadena +=" <div class=\"mp_options\"><span class=\"mp_comp\">Compartir</span><span class=\"mp_delete\">delete</span><span class=\"mp_like\">like</span><span class=\"mp_download\" title='Si deseas descargar esta cancion haz clic aqui'>download</span>";
+        $cadena +="<span class=\"mp_play\">Play</span>";
+        $cadena +="<span class=\"mp_addpl\">Add to playlist</span></div>";
+        $cadena +="<div class=\"mp_song_info\" style=\"display:none;\">";
+        $cadena +="<span class=\"mp_song_title\">"+canciones[j][8]+"</span><span class=\"mp_mp3\">"+canciones[j][8]+"</span>";
+        $cadena +="<span class=\"mp_ogg\">"+canciones[j][8]+"</span>";
+        $cadena +="<span class=\"mp_id\">"+canciones[j][0]+"</span>";
+        $cadena +="<span class=\"mp_price\">"+canciones[j][2]+"</span></div></div>";
+    }
+    document.getElementById('Biblioteca').innerHTML= $cadena; 
+    $cadena='';
     
     reproductor();
 }

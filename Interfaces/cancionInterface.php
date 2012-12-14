@@ -65,25 +65,22 @@ class cancionInerface {
             break;
             case 7:
                 $controlCancion->insertarCancionComprada($_POST['id']);
-                break;
-
-
+            break;
             case 8:
                 $controlCancion->descargarCancion($_POST['id_cancion'], $_POST['url_cancion']);
-                break;
+            break;
             case 9:
                 $controlCancion->recomendarCanciones();
-                break;
-
+            break;
             case 10:
                 $controlCancion->cancionesCompradasPorUsuario($_POST['id']);
-                break;
+            break;
             case 11://ojo estaba en la opcion 6 felipe
                 $controlCancion->modificarCancion($_POST['id']);
-                break;
+            break;
             case 12://ojo estaba en la opcion 6 felipe
                 $controlCancion->listarCompartidas();
-                break;
+            break;
         }
     }
 
