@@ -47,7 +47,9 @@ include ('../Interfaces/seguridad.php');
         <link href="css/example.css" rel="stylesheet" type="text/css">
 
         <script type="text/javascript" src="js/sessvars.js"></script>
-
+        
+<!--        Reportes-->
+        <script src="js/utilidadReportes.js" type="text/javascript"></script>
         <script type="text/javascript">
 
             $(document).ready(function(){
@@ -173,6 +175,10 @@ include ('../Interfaces/seguridad.php');
                 
             </p>
             <h3 onclick="mostrarElemento('DatosPersonales')"> Información Personal</h3>
+            <h3 id="tituloReporte">Reportes</h3>
+            <p>
+                <input type="button" id="reportes" style="width: 80%; background:#e4bf15; height: 10%;"   onclick="mostrarElemento('reporteEscuchadas');" value="Canciones mas escuchadas"><br> <br>
+            </p>
             <h3 id="tituloMensaje">Enviar Mensajes</h3>
             <p id="mesajes">
                 <textarea id="descripcion" style="width:200px;height:100px;resize:none;" rows="10" ></textarea>
@@ -223,6 +229,26 @@ include ('../Interfaces/seguridad.php');
                 </ul>
             </div>
            
+            <div id="reporteEscuchadas">
+                <form action="../Interfaces/reportesInterface.php" method="POST" onsubmit="validar()">
+                    <h1>Canciones más escuchadas</h1>
+                    <label style="color:#e49b1a;margin-left: 20%; font-size: 22px;">mostrar reporte de las</label> <select name="thelist" style="width: 10%; margin-left: 0%;" onChange="comboReporte(this)">
+
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>10</option>
+                        <option>12</option>
+
+
+                    </select><label style="color:#e49b1a; font-size: 22px;"> canciones mas escuchadas</label>
+                    <input id="variable" name="variable" type="hidden" />
+                    <input type="submit" value="ver_Reporte" name="opcion"/>
+                </form>
+
+            </div>
 
             <div id="crearLista">
                 <h1>Crear una lista</h1>

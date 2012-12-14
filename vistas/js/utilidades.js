@@ -50,14 +50,17 @@ function mostrarElemento(elemento)
         div.slideDown("low");
         div.css("display", "block");
         $usuario=sessvars.usuario;
-        if($usuario!="admin")
+        if($usuario=="admin")
         {
-            $("#mesajes").css("display", "none");
-            $("#tituloMensaje").css("display", "none");
+            $("#mesajes").css("display", "block");
+            $("#tituloMensaje").css("display", "block");
+            $("#tituloReporte").css("display", "block");
+            $("#reportes").css("display", "block");
+            
         }else
         {
-            $("#recMensajes").css("display", "none");
-            $("#prueba").css("display", "none");                
+            $("#recMensajes").css("display", "block");
+            $("#prueba").css("display", "block");                
         }
     }
         

@@ -252,7 +252,7 @@
                     <table>
                         <tr>
 
-                            <th><span style="color: white;">login</span></th><th> <input name="login" id="login" placeholder="nombre usuario" required="true" onkeyup="metodoAjax()"/> </th><th><span id="mensaje" style="color: white;"></span></th>
+                            <th><span style="color: white;">login</span></th><th> <input name="login" id="login" placeholder="nombre usuario" required="true" /> </th><th><span id="mensaje" style="color: white;"></span></th>
                         </tr>
                         <tr>
                             <th><span style="color: white;">Password</span></th><th><input type="password"  name="password" id="password" required="true" placeholder="digite su password"/></th><th></th>
@@ -275,7 +275,7 @@
 
 
                     </table>
-                        <input  id="btnRegistrar" type="submit" value="registrar" style="margin-left: 24%;" class="button" name="accion" disabled="true"/> 
+                        <input  id="btnRegistrar" type="submit" value="registrar" style="margin-left: 24%;" class="button" name="accion" /> 
                     </form>
 
 
