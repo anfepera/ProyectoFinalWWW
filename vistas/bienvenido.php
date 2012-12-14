@@ -323,11 +323,6 @@ include ('../Interfaces/seguridad.php');
 
                     </div>
                 </div>
-
-
-
-
-
                 <!--End #content-->		
             </div>
                <div id="subirCancion">
