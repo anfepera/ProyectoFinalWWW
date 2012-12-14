@@ -9,7 +9,6 @@ function leerMetadatos(file) {
         {
             var fragmentos = file.split(".")
             datosCancion[0] = fragmentos[0];
-            alert(file);
         }else
         {
             datosCancion[0] = ID3.getTag(file, "title");
