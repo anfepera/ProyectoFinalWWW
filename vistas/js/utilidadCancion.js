@@ -3,7 +3,6 @@ var $descargarCancion=false;
 function leerMetadatos(file) {
     var datosCancion = [];
     function callback() {
-        alert(file);
         var tags = ID3.getAllTags(file);
         if(ID3.getTag(file, "title")=='undefine' || ID3.getTag(file, "title")==null)
         {
