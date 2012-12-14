@@ -21,7 +21,7 @@ function leerMetadatos(file) {
 //    alert(datosCancion[0]+' '+ datosCancion[1]+' '+ datosCancion[2]+' '+ datosCancion[3]);	
 //    
 //    alert('Datos de la Canción: \n\n    Título: '+ datosCancion[1]+ '\n    Interprete: '+ datosCancion[1]+ '\n    Genero: '+ datosCancion[2]+ '\n    Album: '+ datosCancion[3]);
-alert("Cancion subida correcrtamente","EXito");
+alert("Cancion subida correcrtamente","Exito");
     return datosCancion;
 }
 
