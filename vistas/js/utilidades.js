@@ -20,6 +20,7 @@ function recuperarLogin()
     sessvars.usuario = $("#idUsuario").attr("value");
 }
 
+
 function mostrarElemento(elemento)
 {
     var documento = $(document);
@@ -28,6 +29,7 @@ function mostrarElemento(elemento)
     function mostrar()
     {
         $("#reproductor").css("display", "none");
+        $("#subirCancion").css("display", "none");
         $("#crearLista").css("display", "none");
          $("#content").css("display", "none");
          $("#reporteCompradas").css("display", "none");
@@ -955,7 +957,7 @@ function obtenerBiblioteca()
             $cadena +="<span class=\"mp_play\">Play</span>";
             $cadena +="<span class=\"mp_addpl\">Add to playlist</span></div>";
             $cadena +="<div class=\"mp_song_info\" style=\"display:none;\">";
-            $cadena +="<span class=\"mp_song_title\">"+canciones[j][1]+"</span><span class=\"mp_mp3\">"+canciones[j][8]+"</span>";
+            $cadena +="<span class=\"mp_song_title\">"+canciones[j][8]+"</span><span class=\"mp_mp3\">"+canciones[j][8]+"</span>";
             $cadena +="<span class=\"mp_ogg\">"+canciones[j][8]+"</span>";
             $cadena +="<span class=\"mp_id\">"+canciones[j][0]+"</span>";
             $cadena +="<span class=\"mp_price\">"+canciones[j][2]+"</span></div></div>";

@@ -112,6 +112,20 @@ header h1
     border-bottom-left-radius: 20px;
 
 }
+#subirCancion{
+    -webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+    -moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+    box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+    display:none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 10%;
+    margin-left: 10%;
+    width:50%;
+    
+}
 #busquedaCanciones
 
 {

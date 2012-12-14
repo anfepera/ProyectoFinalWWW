@@ -54,8 +54,8 @@ include ('../Interfaces/seguridad.php');
 
             $(document).ready(function(){
 	
-                $(".menu h3").eq(2).addClass("active");
-                $(".menu p").eq(2).show();
+                $(".menu h3").eq(7).addClass("active");
+                $(".menu p").eq(7).show();
                 //                $(".menu div").eq(2).show();
 
                 $(".menu h3").click(function(){
@@ -119,36 +119,10 @@ include ('../Interfaces/seguridad.php');
                 
             </div>
         </header>
-
+        
         <div class="menu">
             <h3 onclick="informacionMetadatos();">Subir una Cancion</h3>
-            <div>
-                <form action="ajaxupload/upload.php" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="startUpload();">
-                    <p id="f1_upload_process">Loading...<br/><img src="images/loader.gif" /><br/></p>
-                    <div id="f1_upload_form" align="center"><br/>
-                        <label>File:  
-                            <input name="myfile" type="file" size="30" />
-                        </label>
-                        <label>
-                            <input type="submit" name="submitBtn" class="sbtn" value="Subir archivo" />
-                        </label>
-                    </div>
-                    <iframe id="upload_target" name="upload_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
-                </form>
-                <!--                    -->
-                <form action="ajaxupload/upload.php" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="startUpload();" >
-                    <p id="f1_upload_process">Loading...<br/><img src="images/loader.gif" /><br/></p>
-                    <p id="f1_upload_form" align="center"><br/>
-                        <label>File:  
-                            <input name="myfile" type="file" size="30" />
-                        </label>
-                        <label>
-                            <input type="submit" name="submitBtn" class="sbtn" value="Upload" />
-                        </label>
-                    </p>
-                    <iframe id="upload_target" name="upload_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
-                </form>
-            </div>
+            
             
             <h3 onclick="mostrarElemento('content')">Comprar canciones</h3>
             <p id="panelBusqueda">
@@ -191,7 +165,6 @@ include ('../Interfaces/seguridad.php');
         </div>
 
         <div id="principal">
-
             <div id="reproductor" class="mp_wrapper">
 
                 <div id="mp_content_wrapper" class="mp_content_wrapper">
@@ -357,21 +330,22 @@ include ('../Interfaces/seguridad.php');
 
                 <!--End #content-->		
             </div>
+               <div id="subirCancion">
+                <form action="ajaxupload/upload.php" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="startUpload();">
+                    <p id="f1_upload_process">Loading...<br/><img src="images/loader.gif" /><br/></p>
+                    <div id="f1_upload_form" align="center"><br/>
+                        <label>File:  
+                            <input name="myfile" type="file" size="30" />
+                        </label>
+                        <label>
+                            <input type="submit" name="submitBtn" class="sbtn" value="Subir archivo" />
+                        </label>
+                    </div>
+                    <iframe id="upload_target" name="upload_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
+                </form>
+                <!--                    -->
+            </div>
         </div>
-
-        <script type="text/javascript">
-<?php $timestamp = time(); ?>
-                 $(function() {
-                     $('#file_upload').uploadify({
-                         'formData'     : {
-                             'timestamp' : '<?php echo $timestamp; ?>',
-                             'token'     : '<?php echo md5('unique_salt' . $timestamp); ?>'
-                         },
-                         'swf'      : 'uploadify.swf',
-                         'uploader' : '../ScripsUpload/uploadify.php'
-                     });
-                 });
-        </script>
     </body>
 
 </html>
