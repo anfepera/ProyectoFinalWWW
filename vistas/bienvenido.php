@@ -175,9 +175,9 @@ include ('../Interfaces/seguridad.php');
                 
             </p>
             <h3 onclick="mostrarElemento('DatosPersonales')"> Información Personal</h3>
-            <h3 id="tituloReporte">Reportes</h3>
+            <h3 id="tituloReporte" style="display:none">Reportes</h3>
             <p>
-                <input type="button" id="reportes" style="width: 80%; background:#e4bf15; height: 10%;"   onclick="mostrarElemento('reporteEscuchadas');" value="Canciones mas escuchadas"><br> <br>
+                <input type="button" id="reportes" style="display:none; width: 80%; background:#e4bf15; height: 10%;"   onclick="mostrarElemento('reporteEscuchadas');" value="Canciones mas escuchadas"><br> <br>
             </p>
             <h3 id="tituloMensaje" style="display:none">Enviar Mensajes</h3>
             <p id="mesajes" style="display:none">
