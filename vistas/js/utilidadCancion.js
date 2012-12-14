@@ -404,9 +404,7 @@ function eliminarCancionDelista(album_id,identificador)
    
   alert(datos,'Respuesta');
   }
-   
-   
-   
+ 
   // jAlert('Llegaron los datos ?????'+datos); 
   }
  	  

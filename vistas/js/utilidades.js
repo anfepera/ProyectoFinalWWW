@@ -495,7 +495,6 @@ function reproductor()
         var price       =$paths.find('.mp_price').html();
         var identificador  =$paths.find('.mp_id').html();
         
-        
         eliminarCancionDelista(album_id,identificador);
        
     });
